@@ -8,7 +8,7 @@ const { expect } = chai;
 describe('printEntries()', () => {
 	before(() => {
 		const str = 'awesome';
-		nock('https://4e70c2de.ngrok.io').get('/api/v1/entries').reply(200, `[{ title: 3, description: ${str} }]`);
+		nock('https://4e70c2de.ngrok.io').get('/api/v1/entries').reply(200, `[{ title: 5, description: ${str} }]`);
 	});
 	it('should show all entries', (done) => {
 		const url = 'https://4e70c2de.ngrok.io/api/v1/entries';
