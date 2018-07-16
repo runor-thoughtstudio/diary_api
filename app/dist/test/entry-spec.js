@@ -22,12 +22,12 @@ var expect = _chai2.default.expect;
 describe('printEntries()', function () {
 	before(function () {
 		var str = 'awesome';
-		(0, _nock2.default)('https://4e70c2de.ngrok.io').get('/api/v1/entries').reply(200, '[{ title: 3, description: ' + str + ' }]');
+		(0, _nock2.default)('https://4e70c2de.ngrok.io').get('/api/v1/entries').reply(200, '[{ title: 6, description: ' + str + ' }]');
 	});
 	it('should show all entries', function (done) {
 		var url = 'https://4e70c2de.ngrok.io/api/v1/entries';
 		_tools2.default.showEntries(url, function (body) {
-			expect(body).to.be.a('array');
+			expect(body).to.be.a('string');
 			done();
 		});
 	}).timeout(10000);
