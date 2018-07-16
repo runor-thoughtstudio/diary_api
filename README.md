@@ -2,4 +2,4 @@
 
 
 # diary_api
-For the MyDiary application
+For the MyDiary applications
