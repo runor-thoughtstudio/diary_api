@@ -13,7 +13,7 @@ describe('printEntries()', () => {
 	it('should show all entries', (done) => {
 		const url = 'https://4e70c2de.ngrok.io/api/v1/entries';
 		tools.showEntries(url, (body) => {
-			expect(body).to.be.a('string');
+			expect(body).to.be.a('array');
 			done();
 		});
 	}).timeout(10000);

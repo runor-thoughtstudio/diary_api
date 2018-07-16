@@ -27,7 +27,7 @@ describe('printEntries()', function () {
 	it('should show all entries', function (done) {
 		var url = 'https://4e70c2de.ngrok.io/api/v1/entries';
 		_tools2.default.showEntries(url, function (body) {
-			expect(body).to.be.a('string');
+			expect(body).to.be.a('array');
 			done();
 		});
 	}).timeout(10000);
